@@ -1,0 +1,10 @@
+{
+  "project": "innerbetter",
+  "screen": "cart",
+  "gate": "G1",
+  "pass": true,
+  "violationCount": 0,
+  "returnTo": null,
+  "violations": [],
+  "judgedAt": "2026-10-05T06:52:16.038Z"
+}

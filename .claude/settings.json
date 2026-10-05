@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node harness/scripts/judge.js:*)",
+      "Bash(node harness/scripts/scope.js:*)",
+      "Bash(node harness/scripts/new-project.js:*)",
+      "PowerShell(node harness/scripts/judge.js:*)",
+      "PowerShell(node harness/scripts/scope.js:*)",
+      "PowerShell(node harness/scripts/new-project.js:*)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "project": "innerbetter",
+  "screen": "home",
+  "stage": "S5",
+  "passed": ["S1", "S2", "S4", "S5"],
+  "failures": { "S1": 0, "S2": 0, "S3": 0, "S4": 0, "S5": 0 },
+  "approvals": { "G1": "approved", "S3": "approved" },
+  "history": [
+    {
+      "at": "2026-10-05T07:21:37Z",
+      "stage": "preflight",
+      "result": "pass",
+      "returnTo": null,
+      "note": "시작 조건 통과"
+    },
+    {
+      "at": "2026-10-05T07:22:50Z",
+      "stage": "S1",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/home/s1/references.md)"
+    },
+    {
+      "at": "2026-10-05T07:23:02Z",
+      "stage": "G1",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G1 기계 조건 통과 (위반 0). 사람 승인 대기"
+    },
+    {
+      "at": "2026-10-05T07:27:00Z",
+      "stage": "G1",
+      "result": "approved",
+      "returnTo": null,
+      "note": "G1 사람 승인 완료 (수정 없음)"
+    },
+    {
+      "at": "2026-10-05T07:28:30Z",
+      "stage": "S2",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/home/s2/spec.md)"
+    },
+    {
+      "at": "2026-10-05T07:28:37Z",
+      "stage": "G2",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G2 통과 (위반 0)"
+    },
+    {
+      "at": "2026-10-05T07:28:40Z",
+      "stage": "S3",
+      "result": "skip",
+      "returnTo": null,
+      "note": "concept/concept.md 존재 — S3 건너뜀"
+    },
+    {
+      "at": "2026-10-05T07:34:30Z",
+      "stage": "S4",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/home/s4/frames.json). Figma home/default 28:51"
+    },
+    {
+      "at": "2026-10-05T07:34:48Z",
+      "stage": "S5",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G5 통과 (위반 0)"
+    }
+  ]
+}

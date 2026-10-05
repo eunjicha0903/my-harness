@@ -1,0 +1,87 @@
+{
+  "project": "innerbetter",
+  "screen": "cart",
+  "stage": "S5",
+  "passed": ["S1", "S2", "S3", "S4", "S5"],
+  "failures": { "S1": 0, "S2": 0, "S3": 0, "S4": 0, "S5": 0 },
+  "approvals": { "G1": "approved", "S3": "approved" },
+  "history": [
+    {
+      "at": "2026-10-05T06:49:59Z",
+      "stage": "preflight",
+      "result": "pass",
+      "returnTo": null,
+      "note": "시작 조건 통과"
+    },
+    {
+      "at": "2026-10-05T06:51:00Z",
+      "stage": "S1",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/cart/s1/references.md)"
+    },
+    {
+      "at": "2026-10-05T06:51:35Z",
+      "stage": "G1",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G1 기계 조건 통과 (위반 0). 사람 승인 대기"
+    },
+    {
+      "at": "2026-10-05T07:00:00Z",
+      "stage": "G1",
+      "result": "approved",
+      "returnTo": null,
+      "note": "G1 사람 승인 완료 (수정 없음)"
+    },
+    {
+      "at": "2026-10-05T07:00:10Z",
+      "stage": "S2",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/cart/s2/spec.md)"
+    },
+    {
+      "at": "2026-10-05T07:00:22Z",
+      "stage": "G2",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G2 통과 (위반 0)"
+    },
+    {
+      "at": "2026-10-05T07:06:30Z",
+      "stage": "S3",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: concept/concept.md). 사람 승인 대기. 주의: Pretendard 미설치로 42dot Sans 대체 — S4 전 해결 필요"
+    },
+    {
+      "at": "2026-10-05T07:08:00Z",
+      "stage": "S3",
+      "result": "approved",
+      "returnTo": null,
+      "note": "S3 사람 승인 완료. 폰트 결정: Pretendard 대신 Inter (design.md·rules.json 사용자 갱신 완료). concept 폰트 교체 진행"
+    },
+    {
+      "at": "2026-10-05T07:10:00Z",
+      "stage": "S3",
+      "result": "pass",
+      "returnTo": null,
+      "note": "폰트 교체 전용 재실행: 텍스트 스타일 15개·TEXT 131개 Inter, font-family/base='Inter', 비-Inter 잔여 0. scope check 통과 (변경: concept/concept.md)"
+    },
+    {
+      "at": "2026-10-05T07:16:30Z",
+      "stage": "S4",
+      "result": "pass",
+      "returnTo": null,
+      "note": "scope check 통과 (변경: screens/cart/s4/frames.json). Figma screens 페이지 23:29에 cart/min-unmet(23:30), cart/min-met(23:83)"
+    },
+    {
+      "at": "2026-10-05T07:17:03Z",
+      "stage": "S5",
+      "result": "pass",
+      "returnTo": null,
+      "note": "G5 통과 (위반 0)"
+    }
+  ]
+}

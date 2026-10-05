@@ -1,0 +1,16 @@
+{
+  "project": "innerbetter",
+  "screen": "product-list",
+  "gate": "G1",
+  "pass": false,
+  "violationCount": 1,
+  "returnTo": "S1",
+  "violations": [
+    {
+      "rule": "G1.file",
+      "detail": "s1/references.md 없음",
+      "returnTo": "S1"
+    }
+  ],
+  "judgedAt": "2026-10-05T07:23:50.533Z"
+}

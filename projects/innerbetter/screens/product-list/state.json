@@ -1,0 +1,24 @@
+{
+  "project": "innerbetter",
+  "screen": "product-list",
+  "stage": "S1",
+  "passed": [],
+  "failures": { "S1": 1, "S2": 0, "S3": 0, "S4": 0, "S5": 0 },
+  "approvals": { "G1": null, "S3": "approved" },
+  "history": [
+    {
+      "at": "2026-10-05T07:23:15Z",
+      "stage": "preflight",
+      "result": "pass",
+      "returnTo": null,
+      "note": "시작 조건 통과"
+    },
+    {
+      "at": "2026-10-05T07:23:50Z",
+      "stage": "G1",
+      "result": "fail",
+      "returnTo": "S1",
+      "note": "G1.file (references.md 없음). 원인: uibowl 무료 일일 한도(10/10) 소진으로 검색 결과 0건. 중단 — 한도 초기화 또는 멤버십 전환 후 S1 재실행"
+    }
+  ]
+}

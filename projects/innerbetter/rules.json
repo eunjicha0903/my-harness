@@ -1,0 +1,75 @@
+{
+  "project": "innerbetter",
+  "sources": ["docs/design.md", "docs/story-service.md"],
+  "figma": { "fileKey": "wsd2HEsLTV74mUSucqjHVF" },
+
+  "design": {
+    "colors": {
+      "base": ["#FFFFFF"],
+      "violet": ["#F3F3F4", "#EDEDEE", "#DADADB", "#89878C", "#7B7A7E", "#6E6C70", "#676569", "#525154", "#3E3D3F", "#302F31"],
+      "green": ["#FDFDF0", "#F8F9C1", "#F5F6BB", "#F0F29C", "#EDF089", "#E9EC6B", "#D4D761", "#A5A84C", "#80823B", "#62632D"],
+      "error": ["#FF0000"]
+    },
+    "fontFamily": "Inter",
+    "fontSizes": [12, 14, 16, 18, 24],
+    "fontWeights": [400, 500, 600],
+    "radii": [0, 6, 8, 12, 14],
+    "frame": { "width": 375, "height": 812 },
+    "sideMargin": 20,
+    "marginExemptLayers": ["bg", "top-bar", "status-bar", "bottom-area"]
+  },
+
+  "references": {
+    "minCount": 5,
+    "minDistinctServices": 3
+  },
+
+  "screens": {
+    "home": { "stories": [1] },
+    "product-list": { "stories": [1] },
+    "product-detail": { "stories": [1] },
+    "cart": { "stories": [2], "requiredStates": ["min-unmet", "min-met"] },
+    "order": { "stories": [3] },
+    "order-complete": { "stories": [3] },
+    "my": { "stories": [4] },
+    "order-history": { "stories": [4] },
+    "order-detail": { "stories": [4, 5], "requiredStates": ["preparing", "shipping", "delivered"] }
+  },
+
+  "naming": {
+    "frame": "<screen>/<state>",
+    "layers": {
+      "orderButton": "btn-order",
+      "cancelButton": "btn-cancel",
+      "shortfallText": "txt-shortfall",
+      "cancelDeadlineText": "txt-cancel-deadline"
+    }
+  },
+
+  "serviceRules": [
+    {
+      "id": "R1-min-order",
+      "story": "story-service.md 어기면 안 되는 것 #1",
+      "screen": "cart",
+      "checks": [
+        { "type": "frameExists", "frame": "cart/min-unmet" },
+        { "type": "allStateEquals", "frame": "cart/min-unmet", "layer": "btn-order", "value": "disabled", "minCount": 1 },
+        { "type": "countAtLeast", "frame": "cart/min-unmet", "layer": "txt-shortfall", "value": 1 }
+      ],
+      "returnTo": "S2"
+    },
+    {
+      "id": "R2-cancel-window",
+      "story": "story-service.md 어기면 안 되는 것 #2",
+      "screen": "order-detail",
+      "checks": [
+        { "type": "allStateEquals", "frame": "order-detail/shipping", "layer": "btn-cancel", "value": "disabled", "minCount": 0 },
+        { "type": "allStateEquals", "frame": "order-detail/delivered", "layer": "btn-cancel", "value": "disabled", "minCount": 0 },
+        { "type": "countAtLeast", "frame": "order-detail/preparing", "layer": "txt-cancel-deadline", "value": 1 }
+      ],
+      "returnTo": "S2"
+    }
+  ],
+
+  "retry": { "maxConsecutiveFailures": 3 }
+}

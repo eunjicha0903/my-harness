@@ -1,0 +1,10 @@
+# 단계마다 다시 만드는 범위 확인 스냅샷
+**/.scope-snapshot.json
+
+# 개인 로컬 설정
+.claude/settings.local.json
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
